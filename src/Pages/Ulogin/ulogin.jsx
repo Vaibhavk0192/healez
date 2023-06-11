@@ -15,10 +15,8 @@ const Ulogin = () => {
           <div class="entries3">
             <div class="UserChoice">
               <div class="uchoice">
-                <img src={UserIcon} className="userIcon"/>
-            <Link to="/ulogin">
-                  User Login
-            </Link>
+                <img src={UserIcon} className="userIcon" />
+                <Link to="/ulogin">User Login</Link>
               </div>
               <div class="Hchoice">
                 <img src={HospitalIcon} class="icon" />
@@ -50,7 +48,7 @@ const Ulogin = () => {
           </div>
         </div>
         <div class="Photo">
-          <img src={HospitalCover}/>
+          <img src={HospitalCover} />
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Usignup2 = () => {
   function handleChange(event) {
     const { name, value } = event.target;
-  
   }
   return (
     <div>
@@ -68,9 +67,7 @@ const Usignup2 = () => {
           </div>
 
           <Link to="/usignup3">
-            <button class="next">
-              Next
-            </button>
+            <button class="next">Next</button>
           </Link>
         </div>
         <div class="Photo">

@@ -15,7 +15,7 @@ const Hospital = () => {
               <label for="contact">Contact No.</label>
               <input
                 type="text"
-                placeholder="Enter details" 
+                placeholder="Enter details"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Enter details'"
               />
@@ -27,7 +27,7 @@ const Hospital = () => {
               <form action="" className="app__hospita-input">
                 <input
                   type="text"
-                  placeholder="Enter details" 
+                  placeholder="Enter details"
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Enter details'"
                 />

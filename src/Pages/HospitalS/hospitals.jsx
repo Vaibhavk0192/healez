@@ -5,7 +5,6 @@ import UserIcon from "../../assets/user.png";
 import HospitalIcon from "../../assets/buildings.png";
 import HospitalIcon2 from "../../assets/buildingsb.png";
 
-
 const Hospitals = () => {
   return (
     <div className="">
