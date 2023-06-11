@@ -1,0 +1,197 @@
+.app__dash {
+    display: flex;
+    background: linear-gradient(113.88deg, #F9FAFC 1.82%, #F8F9F8 48.9%, #F5FFF8 99.01%);
+    backdrop-filter: blur(22px);
+    /* position: absolute; */
+    height: 100vh;
+    width: 200vh;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    z-index: -1;
+    padding: 3rem;
+}
+
+.app__dash-box1 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__dash-box2 {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.app__dash-heading_box {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+}
+
+.app__dash-Heading {
+    flex-wrap: wrap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 37px;
+    color: #3F8AFE;
+}
+
+.app__dash-boxes {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    display: flex;
+    margin: 2rem 0rem;
+}
+
+.app__dash-bp {
+    margin: 0 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 6rem;
+    border: 2px solid #DC7E34;
+    border-radius: 17px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.app__dash-bp p {
+    font-weight: bold;
+    align-items: center;
+}
+
+.app__dash-bp_img {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 1rem; */
+}
+
+.app__dash-bp_img img {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.app__dash-bp_img p {
+    margin-left: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 34px;
+    color: #DC7E34;
+}
+
+.app__dash-heart {
+    margin: 0 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 6rem;
+    border: 2px solid #FA6969;
+    border-radius: 17px;
+    align-items: self-start;
+    padding: 0 1.5rem;
+    justify-content: center;
+
+}
+
+.app__dash-heart p {
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__dash-heart_img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 1rem; */
+}
+
+.app__dash-heart_img img {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.app__dash-heart_img p {
+    margin-left: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 34px;
+    color: #FA6969;
+
+}
+
+.app__dash-allergy_box {
+
+    height: 5rem;
+    background: rgba(210, 255, 241, 0.61);
+    border-radius: 17px;
+    height: 5rem;
+    width: 12rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #8A8A8A;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 1rem 0;
+}
+
+
+.app__dash-profile_box {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin: 0 10rem;
+    height: 20rem;
+    width: 28rem;
+    border: 2px #D2FFF19C solid;
+    box-shadow: 1px 4px 2px #CBFAE3;
+    border-radius: 17px;
+}
+
+.app__dash-profileIcon img {
+    height: 5rem;
+    width: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__dash-Person_info_box {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.app__dash-Person_info {
+    height: 7rem;
+    width: 6rem;
+    background-color: #CBFAE3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 17px;
+    margin-left: 1rem;
+    padding: 1rem 0;
+}
+
+.app__head {
+    display: flex;
+}

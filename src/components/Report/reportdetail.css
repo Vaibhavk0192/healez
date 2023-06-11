@@ -1,0 +1,46 @@
+.app__report-box {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__reports-heading {
+
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0 1rem;
+    border: 1px solid #CDCDCD;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.app__reports-heading p {
+    width: 5rem;
+    display: flex;
+}
+
+.app__reports {
+
+    padding: 0 1rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    justify-items: center;
+    justify-content: space-around;
+    border: 1px solid #D9D9D9;
+}
+
+.app__reports-text {
+    color: rgb(67, 67, 67);
+    width: 5rem;
+    display: flex;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

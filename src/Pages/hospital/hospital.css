@@ -1,0 +1,152 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.Entry {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.submit {
+    border-color: #38E592;
+    background-color: #38E592;
+    box-shadow: none;
+    border-radius: 40px;
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.submitButton {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    align-items: center;
+}
+
+label,
+span {
+    font-weight: bold;
+}
+
+.user {
+    display: flex;
+}
+
+.app__hospital-input input[type="text"] {
+    display: flex;
+    background: rgba(255, 255, 255, 0.61);
+    border: 4px solid rgba(210, 255, 241, 0.61);
+    border-radius: 17px;
+    height: 2.5rem;
+    font-size: 16px;
+    text-align: center;
+    color: #948989;
+    width: 30rem;
+}
+
+.app__hospita-input input[type="text"] {
+    display: flex;
+    background: rgba(255, 255, 255, 0.61);
+    border: 4px solid rgba(210, 255, 241, 0.61);
+    border-radius: 17px;
+    height: 2.5rem;
+    font-size: 16px;
+    text-align: center;
+    color: #948989;
+    width: 24.5rem;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.getbutton {
+    border-color: #38E592;
+    background-color: #38E592;
+    box-shadow: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: white;
+    width: 70px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.app__hospital-box {
+    display: flex;
+    background: linear-gradient(113.88deg, #F9FAFC 1.82%, #F8F9F8 48.9%, #F5FFF8 99.01%);
+    backdrop-filter: blur(22px);
+    position: absolute;
+    height: 100vh;
+    width: 200vh;
+    flex-direction: column;
+    z-index: -1;
+    padding: 3rem;
+}
+
+.user {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.verify {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 17px;
+
+}
+
+.get {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.verfy-text {
+    font-weight: bold;
+    font-size: 17px;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.app__hospital-box2 {
+    margin-top: 2rem;
+    display: flex;
+    padding: 2rem;
+    background-color: white;
+    background: #FFFFFF;
+    border: 2px solid #D2FFF1;
+    box-shadow: 1px 4px 2px rgba(210, 255, 241, 0.61);
+    border-radius: 20px;
+    height: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    display: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}

@@ -1,0 +1,260 @@
+.app__hospitals-box {
+    display: flex;
+    background: linear-gradient(113.88deg, #F9FAFC 1.82%, #F8F9F8 48.9%, #F5FFF8 99.01%);
+    backdrop-filter: blur(22px);
+    height: 100vh;
+    flex-direction: column;
+    z-index: -1;
+    /* padding: 3rem; */
+    width: 119%;
+
+}
+
+.Main2 {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    padding: 20px;
+    width: 208vh;
+    height: 95vh;
+}
+
+.EnterDetails {
+    background: rgba(217, 217, 217, 0.36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100%;
+    width: 65%;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    /* margin:auto; */
+    font-family: 'Montserrat';
+}
+
+.title {
+    font-size: 35px;
+    margin-left: 5rem;
+    margin-top: 3rem;
+
+}
+
+.desc {
+    margin-top: 5px;
+    margin-left: 5rem;
+    font: size 20px;
+    ;
+    font-family: 'Montserrat';
+
+}
+
+.entries,
+.entries2,
+.entries3,
+.need {
+    margin-top: 40px;
+    margin-top: 4rem;
+    align-self: center;
+    width: 60%;
+}
+
+.need {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 35%; */
+    font-size: 1rem;
+    bottom: 0;
+    margin-top: 0;
+}
+
+.entries3 {
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+.title {
+    font-weight: bold;
+}
+
+label {
+    margin-left: 5px;
+}
+
+.Photo {
+    width: 55%;
+}
+
+.Photo img {
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    height: 100%;
+    width: 100%;
+}
+
+input[type=text],
+select,
+textarea,
+input[type=password] {
+
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    font-size: 17px;
+    text-align: center;
+    color: #948989;
+    border: none;
+}
+
+.Add,
+.SignUp,
+.SignIn {
+    border-color: #38E592;
+    background-color: #38E592;
+    box-shadow: none;
+    border-radius: 40px;
+    margin: auto;
+    width: 85px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.SignUp {
+    width: 130px;
+    height: 50px;
+}
+
+.SignIn {
+    margin-top: -20px;
+    width: 130px;
+    height: 50px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.UserChoice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+}
+
+.hchoice,
+.uchoice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.hchoice a {
+    color: white
+}
+
+.hchoice {
+    background-color: #38E592;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: #686868;
+    font-weight: 500;
+}
+
+.app__admission-form_box {
+    margin-top: 2rem;
+}
+
+.entries4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin: auto;
+    width: 60%;
+}
+
+.next {
+    border-color: rgba(63, 138, 254, 1);
+    background-color: rgba(63, 138, 254, 1);
+    box-shadow: none;
+    border-radius: 40px;
+    margin: auto;
+    width: 85px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.next {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+input,
+select {
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    font-size: 17px;
+    text-align: center;
+    color: #948989;
+    border: none;
+
+}
+.profilePhoto>img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.app__user-form{
+    display: flex;
+    width: 100%;
+
+}
+.app__user-form{
+    display: flex;
+    width: 100%;
+
+}
