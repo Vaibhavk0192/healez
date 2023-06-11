@@ -25,6 +25,26 @@ const Admission = () => {
                     <option value="vaccination">Vaccination</option>
                     <option value="Surgery">Surgery</option>
                   </select>
+                  <div class="combined">
+                    <div class="bp">
+                      <label for="bp">Blood Pressure</label>
+                      <input
+                        type="text"
+                        class="bp"
+                        id="bp"
+                        placeholder="mmHg"
+                      />
+                    </div>
+                    <div class="rate">
+                      <label for="rate"> Heart Rate</label>
+                      <input
+                        type="text"
+                        class="rate"
+                        id="rate"
+                        placeholder="bpm"
+                      />
+                    </div>
+                  </div>
 
                 <label class="description">Description/Prescription</label>
                 

@@ -7,7 +7,7 @@ const Usignup4 = () => {
     <div>
     <div class="Main2">
       <div class="EnterDetails">
-        <div class="title">Insuarance Information</div>
+        <div class="title">Insurance Information</div>
         <div class="desc">
           "Health insurance is the cornerstone of well-being, ensuring access
           to quality care, safeguarding against financial burdens, and
