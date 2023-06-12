@@ -64,9 +64,9 @@ export default function Dashboard() {
             <div className="app__dash-profileIcon">
               <img src={Profile} alt="profile-icon" />
             </div>
-            <div className="app__head">VaibhavKapoor0192</div>
-            <div className="app__subhead_bold">20 years</div>
-            <div className="app__subhead_bold">+91-9823984923</div>
+            <div className="app__head">{user?.email}</div>
+            <div className="app__subhead_bold">{age} years</div>
+            <div className="app__subhead_bold">{user?.phoneNumber}</div>
             <div className="app__dash-Person_info_box">
               <div className="app__dash-Person_info">
                 <MdBloodtype size={45} />

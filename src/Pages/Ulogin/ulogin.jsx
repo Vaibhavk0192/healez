@@ -33,7 +33,7 @@ const Ulogin = () => {
               </div>
             </div>
             <div className="wallet-button">
-              <WalletMultiButton />
+              <span>Your Wallet:</span> <WalletMultiButton />
             </div>
           </div>
 

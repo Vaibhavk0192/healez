@@ -60,6 +60,17 @@ const Usignup1 = () => {
                 placeholder="Enter Details"
               />
 
+              <label for="uname">Email*</label>
+              <input
+                type="email"
+                name="email"
+                onChange={inputsHandler}
+                value={userAccount.email}
+                className="uname"
+                id="uname"
+                placeholder="Enter Details"
+              />
+
               <label for="dob">DOB* </label>
               <input
                 type="date"

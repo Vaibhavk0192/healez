@@ -97,9 +97,11 @@ const Usignup4 = () => {
               <label for="benefits">Benefits</label>
               <textarea
                 id="benefits"
-                name="benefits"
                 rows="4"
                 cols="50"
+                name="insuranceBenifits"
+                value={userAccount3.insuranceBenifits}
+                onChange={inputsHandler}
               ></textarea>
             </form>
             <button className="next" onClick={handleExitPage}>

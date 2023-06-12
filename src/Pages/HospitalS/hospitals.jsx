@@ -34,7 +34,7 @@ const Hospitals = () => {
               </div>
             </div>
             <div className="wallet-button">
-              <WalletMultiButton />
+              <span>Your Wallet:</span> <WalletMultiButton />
             </div>
           </div>
           <button className="SignIn">Login</button>
