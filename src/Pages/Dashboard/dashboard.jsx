@@ -9,8 +9,21 @@ import { GiBodyHeight } from "react-icons/gi";
 import { MdBloodtype } from "react-icons/md";
 import ReportDetail from "../../components/Report/reportdetail";
 import Navbar from "../Navbar/navbar";
+import { useSolana } from "../../context/SolanaContext";
+import { Navigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const { wallet, user } = useSolana();
+
+  const dob = new Date(
+    parseInt(user?.year),
+    parseInt(user?.month) - 1,
+    parseInt(user?.day)
+  );
+  const age = Math.floor((new Date() - dob) / (1000 * 60 * 60 * 24 * 365));
+
+  console.log(age);
+
   return (
     <div style={{ display: "flex" }}>
       <Navbar />
@@ -18,7 +31,8 @@ export default function Dashboard() {
         <div className="app__dash-box1">
           <div className="app__dash-heading_box">
             <div className="app__dash-Heading">
-              Welcome, Vaibhav<span>!</span>
+              Welcome, {user?.name}
+              <span>!</span>
             </div>
             <div className="app__subhead">
               Have a nice day and take care, Here is your health activity.
@@ -59,7 +73,7 @@ export default function Dashboard() {
                 <p className="app__subhead" style={{ fontWeight: "bold" }}>
                   Blood
                 </p>
-                <h4>B-</h4>
+                <h4>{user?.bloodGroup}</h4>
               </div>
               <div className="app__dash-Person_info">
                 <GiBodyHeight size={45} />
@@ -67,7 +81,7 @@ export default function Dashboard() {
                   Height
                 </p>
                 <h4>
-                  174 <span>cm</span>
+                  {user?.height} <span>cm</span>
                 </h4>
               </div>
               <div className="app__dash-Person_info">
@@ -76,7 +90,7 @@ export default function Dashboard() {
                   Weight
                 </p>
                 <h4>
-                  70 <span>Kg</span>
+                  {user?.weight} <span>Kg</span>
                 </h4>
               </div>
             </div>

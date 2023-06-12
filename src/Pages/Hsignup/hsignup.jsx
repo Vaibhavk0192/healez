@@ -4,12 +4,12 @@ import HospitalCover from "../../assets/coverHospital.png";
 const Hsignup = () => {
   return (
     <div>
-      <div class="Main2">
-        <div class="EnterDetails">
-          <div class="title"> Sign Up</div>
-          <div class="entries2 ">
+      <div className="Main2">
+        <div className="EnterDetails">
+          <div className="title"> Sign Up</div>
+          <div className="entries2 ">
             <form>
-              <label class="hid">Hospital Name</label>
+              <label className="hid">Hospital Name</label>
               <input
                 type="text"
                 id="hid"
@@ -18,7 +18,7 @@ const Hsignup = () => {
                 placeholder="Enter Details"
               />
 
-              <label class="username">UserName</label>
+              <label className="username">UserName</label>
               <input
                 type="text"
                 id="username"
@@ -27,7 +27,7 @@ const Hsignup = () => {
                 placeholder="Enter Username"
               />
 
-              <label class="password">Password</label>
+              <label className="password">Password</label>
               <input
                 type="text"
                 id="password"
@@ -37,9 +37,9 @@ const Hsignup = () => {
               />
             </form>
           </div>
-          <button class="SignUp">Sign Up</button>
+          <button className="SignUp">Sign Up</button>
         </div>
-        <div class="Photo">
+        <div className="Photo">
           <img src={HospitalCover} />
         </div>
       </div>

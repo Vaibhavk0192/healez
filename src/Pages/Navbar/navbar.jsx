@@ -6,6 +6,8 @@ import { BsFillFileTextFill } from "react-icons/bs";
 import { MdFamilyRestroom } from "react-icons/md";
 import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useSolana } from "../../context/SolanaContext";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function Navbar() {
   return (
@@ -54,6 +56,9 @@ export default function Navbar() {
         <div className="app__navabr-icon">
           <p>Log Out</p>
         </div>
+      </div>
+      <div>
+        <WalletMultiButton />
       </div>
     </div>
   );

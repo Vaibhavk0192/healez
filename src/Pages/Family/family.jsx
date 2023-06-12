@@ -9,41 +9,41 @@ const Family = () => {
       <Navbar />
       <div className="app__family-box">
         <div className="app__head app__family-heading">My Family</div>
-        <div class="Box">
-          <div class="app__user">
+        <div className="Box">
+          <div className="app__user">
             Username
-            <img class="profile" src={Profile} alt="profile pic" />
+            <img className="profile" src={Profile} alt="profile pic" />
           </div>
-          <div class="heading">
+          <div className="heading">
             Name:
-            <span class="input"> Lata Gupta</span>
+            <span className="input"> Lata Gupta</span>
           </div>
-          <div class="heading">
+          <div className="heading">
             Relation:
-            <span class="input"> Mother</span>
+            <span className="input"> Mother</span>
           </div>
-          <div class="ageContact">
-            <div class="heading">
+          <div className="ageContact">
+            <div className="heading">
               Age:
-              <span class="input"> 19 years</span>
+              <span className="input"> 19 years</span>
             </div>
-            <div class="heading ">
+            <div className="heading ">
               Contact:
-              <span class="input"> 9898989898</span>
+              <span className="input"> 9898989898</span>
             </div>
           </div>
-          <div class="heading">
+          <div className="heading">
             Blood Group:
-            <span class="input"> B+</span>
+            <span className="input"> B+</span>
           </div>
-          <div class="heading">
+          <div className="heading">
             Disease:
-            <span class="input">
-              <span class="multiple">
+            <span className="input">
+              <span className="multiple">
                 <li>cancerjkndkbca</li>
                 <li>cancjdkbaer</li>
               </span>
-              <span class="multiple">
+              <span className="multiple">
                 <li>cancer kbhwb</li>
                 <li>cancerjckaj</li>
               </span>

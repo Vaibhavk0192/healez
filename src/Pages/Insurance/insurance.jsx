@@ -8,30 +8,30 @@ const Insurance = () => {
       <Navbar />
       <div className="app__insurance-box">
         <div className="app__head app__family-heading">My Insurance</div>
-        <div class="Box">
-          <div class="heading">
+        <div className="Box">
+          <div className="heading">
             Provider Name:
-            <span class="input">LIC Life Insurance</span>
+            <span className="input">LIC Life Insurance</span>
           </div>
-          <div class="heading">
-            Policy No. :<span class="input">12345645</span>
+          <div className="heading">
+            Policy No. :<span className="input">12345645</span>
           </div>
-          <div class="heading">
+          <div className="heading">
             Coverage Amt:
-            <span class="input">Rs. 50 lakhs</span>
+            <span className="input">Rs. 50 lakhs</span>
           </div>
-          <div class="heading ">
+          <div className="heading ">
             Duration:
-            <span class="input">lifetime</span>
+            <span className="input">lifetime</span>
           </div>
-          <div class="heading">
+          <div className="heading">
             Benefits:
-            <span class="input">
-              <span class="multiple">
+            <span className="input">
+              <span className="multiple">
                 <li>cancerjkndkbca</li>
                 <li>cancjdkbaer</li>
               </span>
-              <span class="multiple">
+              <span className="multiple">
                 <li>cancer kbhwb</li>
                 <li>cancerjckaj</li>
               </span>

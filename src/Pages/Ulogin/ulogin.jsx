@@ -4,50 +4,46 @@ import HospitalCover from "../../assets/coverHospital.png";
 import UserIcon from "../../assets/user.png";
 import HospitalIcon from "../../assets/buildings.png";
 import HospitalIcon2 from "../../assets/buildingsb.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { useSolana } from "../../context/SolanaContext";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import "./wallet.css";
 
 const Ulogin = () => {
+  const { user, createUser } = useSolana();
+
+  // if (user == false) return <Navigate to={"/usignup1"} />;
+  // if (user == "loading") return <>Loading</>;
+  // else if (user) return <Navigate to={"/"} />;
+
   return (
     <div>
-      <div class="Main2">
-        <div class="EnterDetails">
-          <div class="title">Login</div>
-          <div class="entries3">
-            <div class="UserChoice">
-              <div class="uchoice">
+      <div className="Main2">
+        <div className="EnterDetails">
+          <div className="title">Login</div>
+          <div className="entries3">
+            <div className="UserChoice">
+              <div className="uchoice">
                 <img src={UserIcon} className="userIcon" />
-                <Link to="/ulogin">User Login</Link>
+                <Link to={"/ulogin"}>User Login</Link>
               </div>
-              <div class="Hchoice">
-                <img src={HospitalIcon} class="icon" />
-                <a href="/pages/hospitalLogin.html" class="button">
-                  Hospital Login
-                </a>
+              <div className="Hchoice">
+                <img src={HospitalIcon} className="icon" />
+                <Link to={"/hlogin"}>Hospital Login</Link>
               </div>
             </div>
-            <form>
-              <label for="uid">User Id/ Contact No.</label>
-              <input
-                type="text"
-                class="uid"
-                id="uid"
-                placeholder="Enter Details"
-              />
-              <br />
-              <label for="OTP">Verification</label>
-              <div class="getOTP">Get OTP</div>
-              <input type="OTP" class="OTP" id="OTP" placeholder="Enter OTP" />
-            </form>
+            <div className="wallet-button">
+              <WalletMultiButton />
+            </div>
           </div>
 
-          <button class="login">Login</button>
-          <div class="need">
-            {" "}
+          <button className="login">Login</button>
+          <div className="need">
             Need a User Id?
             <a href="">SignUp</a>
           </div>
         </div>
-        <div class="Photo">
+        <div className="Photo">
           <img src={HospitalCover} />
         </div>
       </div>

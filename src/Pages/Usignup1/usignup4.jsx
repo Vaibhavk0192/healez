@@ -1,53 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCover from "../../assets/userlogin.jpg";
-import Profile from "../../assets/woman.png";
 import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useSolana } from "../../context/SolanaContext";
+
 const Usignup4 = () => {
+  const { state } = useLocation();
+  const { userAccount2 } = state;
+  const navigate = useNavigate();
+
+  const { createUser } = useSolana();
+
+  const [userAccount3, setUserAccount3] = useState(userAccount2);
+
+  const inputsHandler = (e) => {
+    const { name, value } = e.target;
+    setUserAccount3((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+    console.log(userAccount3);
+  };
+
+  const handleExitPage = () => {
+    const day = new Date(userAccount3.dob).getDate();
+    const month = new Date(userAccount3.dob).getMonth() + 1;
+    const year = new Date(userAccount3.dob).getFullYear();
+
+    userAccount3.day = day.toString();
+    userAccount3.month = month.toString();
+    userAccount3.year = year.toString();
+    console.log(userAccount3);
+    createUser(userAccount3);
+  };
+
   return (
     <div>
-      <div class="Main2">
-        <div class="EnterDetails">
-          <div class="title">Insuarance Information</div>
-          <div class="desc">
+      <div className="Main2">
+        <div className="EnterDetails">
+          <div className="title">Insuarance Information</div>
+          <div className="desc">
             "Health insurance is the cornerstone of well-being, ensuring access
             to quality care, safeguarding against financial burdens, and
             empowering individuals to prioritize their health without
             hesitation."
           </div>
-          <div class="entries4">
+          <div className="entries4">
             <form className="app__insuranceinfo-form">
               <label for="Weight">Name of the Provider</label>
               <input
                 type="text"
-                class="Weight"
-                id="Weight"
+                className="Weight"
+                id="insuranceProviderName"
+                name="insuranceProviderName"
+                value={userAccount3.insuranceProviderName}
+                onChange={inputsHandler}
                 placeholder="Enter Details"
               />
               <label for="Weight">Policy No.</label>
               <input
                 type="text"
-                class="Weight"
+                className="Weight"
                 id="Weight"
+                name="insurancePolicyNo"
+                value={userAccount3.insurancePolicyNo}
+                onChange={inputsHandler}
                 placeholder="Enter Details"
               />
 
-              <div class="combined">
-                <div class="amount">
+              <div className="combined">
+                <div className="amount">
                   <label for="amount">Coverage Amt</label>
                   <input
                     type="text"
-                    class="amount"
+                    className="amount"
                     id="amount"
                     placeholder="Rs. xxxxx"
+                    name="insuranceAmount"
+                    value={userAccount3.insuranceAmount}
+                    onChange={inputsHandler}
                   />
                 </div>
-                <div class="duration">
+                <div className="duration">
                   <label for="duration">Duration</label>
                   <input
                     type="text"
-                    class="duration"
+                    className="duration"
                     id="duration"
                     placeholder="In months"
+                    name="insuranceDuration"
+                    value={userAccount3.insuranceDuration}
+                    onChange={inputsHandler}
                   />
                 </div>
               </div>
@@ -59,12 +102,12 @@ const Usignup4 = () => {
                 cols="50"
               ></textarea>
             </form>
-            <Link to="/">
-              <button class="next">Finish</button>
-            </Link>
+            <button className="next" onClick={handleExitPage}>
+              Finish
+            </button>
           </div>
         </div>
-        <div class="Photo">
+        <div className="Photo">
           <img src={UserCover} />
         </div>
       </div>

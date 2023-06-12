@@ -10,8 +10,8 @@ const Report = () => {
       <div className="report-box">
         <div className="app__report-heading">
           <div className="app__head">All Reports</div>
-          <div class="search__container">
-            <input class="search__input" type="text" placeholder="Search" />
+          <div className="search__container">
+            <input className="search__input" type="text" placeholder="Search" />
           </div>
         </div>
         <div className="app__report-report_details">

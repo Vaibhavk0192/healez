@@ -1,29 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCover from "../../assets/userlogin.jpg";
 import Profile from "../../assets/woman.png";
+import {  useNavigate } from "react-router-dom";
+
 const Usignup1 = () => {
+  const [userAccount, setUserAccount] = useState({
+    name: "",
+    dob: "",
+    gender: "",
+    phoneNumber: "",
+    email: "",
+    bloodGroup: "",
+    height: "",
+    weight: "",
+    preExistingConditions: "",
+    preExistingAllergies: "",
+    insuranceProviderName: "",
+    insurancePolicyNo: "",
+    insuranceAmount: "",
+    insuranceDuration: "",
+    insuranceBenifits: "",
+  });
+
+  const inputsHandler = (e) => {
+    const { name, value } = e.target;
+    setUserAccount((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+
+    console.log(userAccount);
+  };
+
+  const navigate = useNavigate();
+
+  const handleExitPage = () => {
+    console.log(userAccount);
+    navigate("/usignup2", { replace: true, state: { userAccount } });
+  };
+
   return (
     <div>
-      <div class="Main2">
-        <div class="EnterDetails">
-          <div class="title">Sign Up</div>
-          <div class="entries4">
-            <div class="profilePhoto">
+      <div className="Main2">
+        <div className="EnterDetails">
+          <div className="title">Sign Up</div>
+          <div className="entries4">
+            <div className="profilePhoto">
               <img src={Profile} alt="PP" />
             </div>
             <form className="app__user-form">
-              <label for="uid">User Id*</label>
-              <input
-                type="text"
-                class="uid"
-                id="uid"
-                placeholder="Enter Details"
-              />
-
               <label for="uname">Name*</label>
               <input
                 type="text"
-                class="uname"
+                name="name"
+                onChange={inputsHandler}
+                value={userAccount.name}
+                className="uname"
                 id="uname"
                 placeholder="Enter Details"
               />
@@ -31,13 +63,21 @@ const Usignup1 = () => {
               <label for="dob">DOB* </label>
               <input
                 type="date"
-                class="dob"
+                name="dob"
+                onChange={inputsHandler}
+                value={userAccount.dob}
+                className="dob"
                 id="dob"
                 placeholder="Enter Details"
               />
-              <label class="gender">Gender* </label>
+              <label className="gender">Gender* </label>
 
-              <select id="gender" name="gender">
+              <select
+                id="gender"
+                name="gender"
+                value={userAccount.gender}
+                onChange={inputsHandler}
+              >
                 <option value="select">Select</option>
                 <option value="m">Male</option>
                 <option value="f">Female</option>
@@ -46,16 +86,21 @@ const Usignup1 = () => {
               <label for="contact">Contact No.*</label>
               <input
                 type="contact"
-                class="contact"
+                name="phoneNumber"
+                value={userAccount.phoneNumber}
+                onChange={inputsHandler}
+                className="contact"
                 id="contact"
                 placeholder="Enter contact No."
               />
             </form>
           </div>
 
-          <button class="next">Next</button>
+          <button type="button" className="next" onClick={handleExitPage}>
+            Next
+          </button>
         </div>
-        <div class="Photo">
+        <div className="Photo">
           <img src={UserCover} />
         </div>
       </div>

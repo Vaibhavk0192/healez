@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCover from "../../assets/userlogin.jpg";
-import Profile from "../../assets/woman.png";
-import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Usignup2 = () => {
-  function handleChange(event) {
-    const { name, value } = event.target;
-  }
+  const { state } = useLocation();
+  const { userAccount } = state;
+
+  console.log(userAccount);
+
+  if (!userAccount) navigate("/usignup1");
+
+  const [userAccount2, setUserAccount2] = useState(userAccount);
+
+  const inputsHandler = (e) => {
+    const { name, value } = e.target;
+    setUserAccount2((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const navigate = useNavigate();
+
+  const handleExitPage = () => {
+    console.log(userAccount);
+    navigate("/usignup4", { replace: true, state: { userAccount2 } });
+  };
+
   return (
     <div>
-      <div class="Main2">
-        <div class="EnterDetails">
-          <div class="title">User Information</div>
-          <div class="entries4">
+      <div className="Main2">
+        <div className="EnterDetails">
+          <div className="title">User Information</div>
+          <div className="entries4">
             <form className="app__userinfo-form">
-              <label class="blood">Blood Group </label>
-              <select id="blood" name="blood" onChange={handleChange}>
+              <label className="blood">Blood Group </label>
+              <select
+                id="blood"
+                name="bloodGroup"
+                value={userAccount2.bloodGroup}
+                onChange={inputsHandler}
+              >
                 <option value="select">Select</option>
                 <option value="a+">A+</option>
                 <option value="b+">B+</option>
@@ -29,9 +53,10 @@ const Usignup2 = () => {
               <label for="height">Height</label>
               <input
                 name="height"
-                onChange={handleChange}
+                value={userAccount2.height}
+                onChange={inputsHandler}
                 type="text"
-                class="height"
+                className="height"
                 id="height"
                 placeholder="Enter Details"
               />
@@ -39,38 +64,40 @@ const Usignup2 = () => {
               <label for="Weight">Weight</label>
               <input
                 name="weight"
-                onChange={handleChange}
+                onChange={inputsHandler}
                 type="text"
-                class="Weight"
+                className="Weight"
                 id="Weight"
                 placeholder="Enter Details"
               />
-              <label class="diesease">Illness/Diesease</label>
+              <label className="diesease">Illness/Diesease</label>
 
               <textarea
                 id="disease"
-                name="disease"
+                name="preExistingConditions"
                 rows="4"
                 cols="50"
-                onChange={handleChange}
+                value={userAccount2.preExistingConditions}
+                onChange={inputsHandler}
               ></textarea>
-              <label class="allergy">Allergies</label>
+              <label className="allergy">Allergies</label>
 
               <textarea
                 id="allergy"
-                name="allergy"
+                name="allergies"
                 rows="4"
                 cols="50"
-                onChange={handleChange}
+                value={userAccount2.allergies}
+                onChange={inputsHandler}
               ></textarea>
             </form>
           </div>
 
-          <Link to="/usignup3">
-            <button class="next">Next</button>
-          </Link>
+          <button className="next" onClick={handleExitPage}>
+            Next
+          </button>
         </div>
-        <div class="Photo">
+        <div className="Photo">
           <img src={UserCover} />
         </div>
       </div>
