@@ -1,9 +1,12 @@
 import React from "react";
 import "./hospital.css";
 import FamilyCard from "../../components/familyCard/familycard";
+import Navbar from "../Navbar/navbar";
 
 const Hospital = () => {
   return (
+    <div style={{ display: "flex" }}>
+    <Navbar />
     <div className="app__hospital-box">
       <div className="main">
         <div className="Entry">
@@ -39,13 +42,14 @@ const Hospital = () => {
         <div className="submitButton">
           <button className="submit">Submit</button>
         </div>
-      </div>
+      </div>  
       <div className="app__hospital-box2">
         <FamilyCard />
         <FamilyCard />
         <FamilyCard />
         <FamilyCard />
       </div>
+    </div>
     </div>
   );
 };

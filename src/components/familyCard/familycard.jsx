@@ -14,7 +14,7 @@ const FamilyCard = () => {
           Vaibhav Kapoor
         </div>
         <div className="app__subhead" style={{ fontWeight: "bold" }}>
-          +91-9815992941
+          +91-xxxxxxxxxx
         </div>
       </div>
     </div>
